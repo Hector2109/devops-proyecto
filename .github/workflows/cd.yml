@@ -25,6 +25,12 @@ jobs:
           echo "  Réplicas: ${{ vars.REPLICA_COUNT }}"
           echo "========================================="
           echo "Deploy completado exitosamente en staging"
+      - name: Verificar configuración ambiente
+        run: |
+          echo "Ambiente: ${{ vars.APP_ENV }}"
+          echo "DB configurada: ${{ secrets.DB_URL != '' && 'SI' || 'NO' }}"
+          # NUNCA hacer: echo ${{ secrets.DB_URL }}
+          # Los secrets nunca se imprimen en logs
 
   deploy-production:
     name: Deploy → Production
