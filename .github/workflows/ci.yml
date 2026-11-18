@@ -10,6 +10,9 @@ jobs:
   lint-and-test:
     name: Lint y Tests Unitarios
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
 
     steps:
       - name: Clonar repositorio
