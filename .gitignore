@@ -25,3 +25,13 @@ terraform.tfstate.backup
 .terraform.lock.hcl
 trivy-report.json
 trivy-results.sarif
+
+# Manifiestos K8s locales en raiz
+configmap.yaml
+deployment.yaml
+ingress.yaml
+pod.yaml
+pvc.yaml
+replicaset.yaml
+secret.yaml
+service.yaml
